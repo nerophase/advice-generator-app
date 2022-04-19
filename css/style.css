@@ -1,0 +1,123 @@
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+
+- Family: Manrope
+- Weights: 800
+
+-font size: 28px (quote)
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Manrope', sans-serif;
+	font-weight: 800;
+	user-select: none;
+}
+
+:root {
+	/* Colors */
+	--bg: #202632;
+	--white: hsl(0, 0%, 100%);
+
+	/* Primary */
+	--lightCyan: hsl(193, 38%, 83%);
+	--neonGreen: hsl(150, 100%, 66%);
+
+	/* Neutral */
+	--grayishBlue: hsl(217, 19%, 38%);
+	--darkGrayishBlue: hsl(217, 19%, 24%);
+	--darkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--white);
+}
+
+main,
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	height: 90vh;
+}
+
+footer {
+	height: 10vh;
+}
+
+#container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 500px;
+	padding: 25px;
+	border-radius: 15px;
+	background-color: var(--darkGrayishBlue);
+}
+
+#container figure img,
+#container picture,
+#container picture img {
+	width: 100%;
+}
+
+q,
+p,
+h3,
+h4 {
+	text-align: center;
+}
+
+#advice {
+	color: var(--neonGreen);
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#quote {
+	font-size: 28px;
+	margin-bottom: 30px;
+}
+
+figure,
+picture {
+	margin-bottom: 30px;
+}
+
+button {
+	position: absolute;
+	bottom: -25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--neonGreen);
+	border: none;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	transition: 0.2s;
+}
+
+button img {
+	width: 20px;
+}
+
+button:hover {
+	box-shadow: 0px 0px 30px var(--neonGreen);
+	cursor: pointer;
+}
+
+@media (max-width: 550px) {
+	#container {
+		width: 90%;
+	}
+}
